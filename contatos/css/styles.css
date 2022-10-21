@@ -8,6 +8,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html, body {
+    height: 100vh;
+    overflow: hidden;
+}
+
 #store {
     width: 80px;
     display: flex;
@@ -34,7 +39,7 @@
 }
 .header {
     width: 100%;
-    height: 64px;
+    height: 10%;
 
     display: flex;
     justify-content: space-between;
@@ -42,6 +47,10 @@
 
     background-color: #444242;
     
+}
+
+.content {
+    height: 82.2%;
 }
 
 .menu {
@@ -68,7 +77,7 @@ section {
 
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 19px;
 
     display: flex;
@@ -100,7 +109,7 @@ section {
 
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 16px;
 
     color: #5B5A5A;
@@ -124,7 +133,7 @@ section {
 
 footer {
     width: 100%;
-    height: 50px;
+    height: 7.8%;
 
     display: flex;
     justify-content: center;
@@ -132,10 +141,89 @@ footer {
 
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
 
     color: #FFFFFF;
     background: #FA9401;
-    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-number {
+    position: absolute;
+    right: -.625rem;
+    top: -.3125rem;
+    height: 1rem;
+    width: 1rem;
+    background: #FA9401;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: .625rem;
+    line-height: 0;
+}
+
+@media screen and (orientation: landscape) { 
+
+    .header {
+        height: 15%;
+    }
+
+    .content {
+        height: 75%;
+    }
+
+    footer {
+        height: 10%;
+    }
+}
+
+
+@media screen and (min-width: 500px) and (min-height: 500px) {
+
+    .header {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    #store {
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    #voltar {
+        padding-left: 0;
+        flex-grow: 1;
+    }
+
+    #voltar img {
+        width: 30px;
+    }
+
+    #logo {
+        padding-left: 0;
+        flex-grow: 1;
+        height: 60px;
+    }
+
+    .social-network {
+        margin-bottom: 10px;
+    }
+
+    .subHeader {
+        font-size: 30px;
+        padding: 30px 15px;
+    }
 }
